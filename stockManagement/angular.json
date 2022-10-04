@@ -127,5 +127,10 @@
       }
     }
   },
-  "defaultProject": "stockManagement"
+  "defaultProject": "stockManagement",
+  "cli": {
+    "cache": {
+      "enabled": false
+    }
+  }
 }

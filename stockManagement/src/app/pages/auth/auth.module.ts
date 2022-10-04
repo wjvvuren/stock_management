@@ -12,18 +12,7 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { DataTableModule } from '../../components/data-table/data-table.module';
 
 @NgModule({
-  declarations: [
-    AuthComponent,
-    RegisterComponent,
-    LoginComponent,
-    ForgotpasswordComponent,
-  ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    MaterialModule,
-    NavbarModule,
-    DataTableModule,
-  ],
+  declarations: [RegisterComponent, LoginComponent, ForgotpasswordComponent],
+  imports: [CommonModule, AuthRoutingModule, MaterialModule, NavbarModule, DataTableModule]
 })
 export class AuthModule {}

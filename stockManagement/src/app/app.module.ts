@@ -12,18 +12,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarModule } from './components/navbar/navbar.module';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { DataTableModule } from './components/data-table/data-table.module';
+import { AuthComponent } from './pages/auth/auth.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, ViewEditEntryComponent],
-  imports: [
-    DataTableModule,
-    NavbarModule,
-    BrowserModule,
-    AppRoutingModule,
-    MaterialModule,
-    BrowserAnimationsModule,
-  ],
+  declarations: [AppComponent, AuthComponent, AdminComponent],
+  imports: [DataTableModule, NavbarModule, BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
