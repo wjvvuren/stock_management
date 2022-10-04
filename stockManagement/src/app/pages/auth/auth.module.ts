@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { AuthComponent } from './auth.component';
 import { MaterialModule } from '../../material/material/material.module';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AuthComponent,
