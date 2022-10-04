@@ -46,7 +46,7 @@
 
   <ng-container matColumnDef="Accessories">
     <th mat-header-cell *matHeaderCellDef>Accessories</th>
-    <!-- accessories is an object with name and description  -->
+
     <td mat-cell *matCellDef="let car">
       <ul>
         <li *ngFor="let accessory of car.Accessories">
@@ -58,11 +58,16 @@
 
   <ng-container matColumnDef="images">
     <th mat-header-cell *matHeaderCellDef>Images</th>
-    <!-- images is array  -->
+
     <td mat-cell *matCellDef="let car">
       <ul>
         <li *ngFor="let image of car.images">
-          <img [src]="image" alt="car image" />
+          <img
+            width="50"
+            class="image-fluid"
+            [src]="image.src"
+            alt="car image"
+          />
         </li>
       </ul>
     </td>
@@ -99,5 +104,3 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
-
-<p>Testing</p>

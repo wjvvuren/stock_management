@@ -13,7 +13,7 @@ export interface carElements {
   RetailPrice: number;
   CostPrice: number;
   Accessories: Array<{ name: string; description: string }>;
-  images: Array<{ image: string }>;
+  images: Array<{ src: string }>;
   DateCreated: Date;
   DateUpdated: Date;
 }
@@ -41,9 +41,15 @@ export class DataTableComponent implements OnInit {
       ],
 
       images: [
-        { image: 'https://picsum.photos/200/300' },
-        { image: 'https://picsum.photos/200/300' },
-        { image: 'https://picsum.photos/200/300' },
+        {
+          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
+        },
+        {
+          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
+        },
+        {
+          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
+        },
       ],
 
       DateCreated: new Date(),
@@ -63,7 +69,11 @@ export class DataTableComponent implements OnInit {
         { name: 'Aircon', description: 'Aircon' },
         { name: 'Power Steering', description: 'Power Steering' },
       ],
-      images: [{ image: 'https://picsum.photos/200/300' }],
+      images: [
+        {
+          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
+        },
+      ],
       DateCreated: new Date(),
       DateUpdated: new Date(),
     },

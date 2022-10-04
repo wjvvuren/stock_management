@@ -37,3 +37,15 @@
     box-shadow: 0 0.5rem 1rem var(--color-primary-transparent);
   }
 }
+
+// this is the wave styling
+.bg1 {
+  width: 100vw;
+  z-index: -1;
+  height: 100%;
+  background: url("../assets/Images/wave.svg") no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
