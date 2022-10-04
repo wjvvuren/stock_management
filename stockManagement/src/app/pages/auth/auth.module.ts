@@ -7,7 +7,10 @@ import { LoginComponent } from './login/login.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { AuthComponent } from './auth.component';
 import { MaterialModule } from '../../material/material/material.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavbarModule } from '../../components/navbar/navbar.module';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { DataTableModule } from '../../components/data-table/data-table.module';
+
 @NgModule({
   declarations: [
     AuthComponent,
@@ -15,6 +18,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     ForgotpasswordComponent,
   ],
-  imports: [CommonModule, AuthRoutingModule, MaterialModule],
+  imports: [
+    CommonModule,
+    AuthRoutingModule,
+    MaterialModule,
+    NavbarModule,
+    DataTableModule,
+  ],
 })
 export class AuthModule {}

@@ -15,16 +15,6 @@
 .login-btn {
   width: 100%;
 }
-// customize bootstrap card
-.card {
-  border: none;
-  border-radius: 0.3rem;
-  box-shadow: 0 0.3rem 0.5rem var(--color-primary-transparent);
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    box-shadow: 0 0.5rem 1rem var(--color-primary-transparent);
-  }
-}
 
 @media (max-width: 767px) {
   .customHeight {
