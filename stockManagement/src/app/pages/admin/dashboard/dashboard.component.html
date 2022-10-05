@@ -1,14 +1,14 @@
 <div class="container-fluid bg1">
-  <app-navbar></app-navbar>
   <div class="row">
     <div class="col-md-12">
       <h1 class="text-center mt-2">Vehicle Management</h1>
 
-      <button (click)="addNew()" class="btn primary-btn">Add New</button>
-
-      <div class="d-flex justify-content-center">
-        <app-data-table></app-data-table>
-      </div>
+      <button (click)="addNew()" class="btn primary-btn float-end me-3 mb-2">
+        Add New Vehicle
+      </button>
+    </div>
+    <div class="d-flex justify-content-center">
+      <app-data-table></app-data-table>
     </div>
   </div>
 </div>

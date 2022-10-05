@@ -1,8 +1,31 @@
+<div id="scroll-container">
+  <div id="scroll-text">
+    <b>F1 NEWS: </b>
+    <img class="newsImg" src="../../../../assets/Images/max.jpg" alt="logo" />
+    Max Verstappen leading this years grand with a whopping
+    <b>341 point</b>
+    <img class="newsImg" src="../../../../assets/Images/sad.jpg" alt="logo" />
+    Unfortunatly the same cannot be said for Lewis Hamilton
+    <span>
+      Struggling with measly 170 point. A supportline has been set up for those
+      who are struggling with the news. Call the tollfree number today :
+      <b>0800 123 456</b>
+    </span>
+    or
+
+    <a href="https://www.verstappen.com/" target="_blank">Click here</a>
+  </div>
+</div>
+
 <div class="container customHeight">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-9 col-lg-6 col-xl-5">
       <!-- insert img -->
-      <img src="../../../../assets/Images/motorcar.png" class="img-fluid" alt="motorcar" />
+      <img
+        src="../../../../assets/Images/motorcar.png"
+        class="img-fluid"
+        alt="motorcar"
+      />
     </div>
 
     <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -13,15 +36,27 @@
         <div class="card-body">
           <div class="form-group mb-2">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Username" />
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Username"
+            />
           </div>
 
           <div class="form-group mb-2">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password" />
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+            />
           </div>
 
-          <button (click)="login()" type="submit" class="primary-btn login-btn">Login</button>
+          <button (click)="login()" type="submit" class="primary-btn login-btn">
+            Login
+          </button>
         </div>
         <div class="card-footer">
           <a class="me-2" routerLink="/auth/forgotpassword">Forgot Password</a>
@@ -30,8 +65,6 @@
       </div>
     </div>
   </div>
-
-  <!-- footer with Facebook, twitter icons from fontawesome -->
 </div>
 <footer class="footer">
   <div class="container-fluid">
@@ -39,7 +72,7 @@
       <div class="col-md-12">
         <div class="mt-1 d-flex justify-content-between">
           <p class="text-white me-2">
-            {{ today | date: 'dd/MM/yyyy' }}
+            {{ today | date: "dd/MM/yyyy" }} {{ time | date: "HH:mm:ss" }}
           </p>
           <p class="text-white">MOTORCAR <b>Powered by CMS</b></p>
         </div>

@@ -1,8 +1,43 @@
-<app-navbar></app-navbar>
-<div class="container-fluid bg1">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center mt-2">View / Edit</h1>
+<div class="container-fluid bg1 mt-4">
+  <div class="row justify-content-md-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h1>Edit Vehicle : BMW X5 2013 (f25)</h1>
+        </div>
+        <div class="card-body">
+          <!-- use object cars to map data -->
+
+          <form *ngFor="let item of cars">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-2">
+                  <label for="registration">Registration Number</label>
+                  <input
+                    type="text"
+                    id="registration"
+                    placeholder="Registration"
+                    [(ngModel)]="item.registration"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="make">Make</label>
+                  <input
+                    type="text"
+                    id="make"
+                    placeholder="Make"
+                    [(ngModel)]="item.make"
+                  />
+                </div>
+              </div>
+
+              <!--  -->
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

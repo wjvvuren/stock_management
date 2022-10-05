@@ -13,9 +13,10 @@ import { DataTableModule } from './components/data-table/data-table.module';
 import { AuthComponent } from './pages/auth/auth.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, AdminComponent],
+  declarations: [AppComponent, AuthComponent, AdminComponent, FooterComponent],
   imports: [
     MatPaginatorModule,
     DataTableModule,
