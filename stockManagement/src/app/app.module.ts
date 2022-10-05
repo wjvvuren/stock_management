@@ -14,6 +14,7 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FooterComponent } from './components/footer/footer.component';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, AdminComponent, FooterComponent],
@@ -25,6 +26,10 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-center',
+      preventDuplicates: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

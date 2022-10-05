@@ -9,16 +9,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ViewEditComponent } from './view-edit/view-edit.component';
 import { CreateNewComponent } from './create-new/create-new.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [DashboardComponent, ViewEditComponent, CreateNewComponent],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    NavbarModule,
-    DataTableModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, AdminRoutingModule, NavbarModule, DataTableModule, ReactiveFormsModule, FormsModule]
 })
 export class AdminModule {}

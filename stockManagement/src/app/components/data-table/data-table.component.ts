@@ -4,7 +4,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-export interface carElements {
+import { ToastrService } from 'ngx-toastr';
+import { DataService } from '../../services/data.service';
+export interface Vehicle {
   RegNo: string;
   Make: string;
   Model: string;
@@ -27,101 +29,7 @@ export interface carElements {
 })
 export class DataTableComponent implements OnInit {
   faTrash = faTrash;
-  carData: carElements[] = [
-    {
-      RegNo: '123456',
-      Make: 'Toyota',
-      Model: 'Corolla',
-      ModelYear: 2019,
-      Kilometers: 10000,
-      Colour: 'Red',
-      VIN: '123456789',
-      RetailPrice: 10000,
-      CostPrice: 8000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-
-      images: [
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
-      ],
-
-      DateCreated: new Date(),
-      DateUpdated: new Date(),
-    },
-    {
-      RegNo: '234',
-      Make: 'BMW',
-      Model: 'X5',
-      ModelYear: 2019,
-      Kilometers: 10000,
-      Colour: 'Red',
-      VIN: '123456789',
-      RetailPrice: 10000,
-      CostPrice: 8000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-      images: [
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
-      ],
-      DateCreated: new Date(),
-      DateUpdated: new Date(),
-    },
-    {
-      RegNo: '123456',
-      Make: 'Toyota',
-      Model: 'Corolla',
-      ModelYear: 2019,
-      Kilometers: 10000,
-      Colour: 'Red',
-      VIN: '123456789',
-      RetailPrice: 10000,
-      CostPrice: 8000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-
-      images: [
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
-      ],
-
-      DateCreated: new Date(),
-      DateUpdated: new Date(),
-    },
-    {
-      RegNo: '234',
-      Make: 'BMW',
-      Model: 'X5',
-      ModelYear: 2019,
-      Kilometers: 10000,
-      Colour: 'Red',
-      VIN: '123456789',
-      RetailPrice: 10000,
-      CostPrice: 8000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-      images: [
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
-      ],
-      DateCreated: new Date(),
-      DateUpdated: new Date(),
-    },
-  ];
-
+  carData: Vehicle[];
   displayedColumns: string[] = [
     'RegNo',
     'Make',
@@ -141,17 +49,23 @@ export class DataTableComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private dataService: DataService,
+    private toastr: ToastrService
+  ) {}
 
-  viewEdit() {
+  viewEdit(vehicle: Vehicle) {
+    this.dataService.openedVehicle = vehicle;
     this.router.navigate(['admin', 'view-edit']);
   }
-
-  delete(index: number) {
-    this.carData.splice(index, 1);
-
-    this.carData = [...this.carData];
+  deleteVehicle(index: number) {
+    this.toastr.success('Vehicle deleted', 'Delete');
+    this.dataService.deleteVehicle(index);
+    this.carData = this.dataService.getData();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.carData = this.dataService.getData();
+  }
 }

@@ -24,3 +24,8 @@ table {
   height: 2rem;
   width: 2rem;
 }
+
+.responsive-table{
+  min-width: 500px;
+  overflow: auto;
+}

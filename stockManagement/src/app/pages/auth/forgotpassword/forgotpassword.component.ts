@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-forgotpassword',
@@ -7,11 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgotpassword.component.scss'],
 })
 export class ForgotpasswordComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private toastr: ToastrService) {}
 
   ngOnInit(): void {}
 
-  reset() {
+  async reset() {
+    this.toastr.success('Password reset link sent to your email', 'Reset');
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     this.router.navigate(['auth']);
   }
 }

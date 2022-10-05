@@ -7,6 +7,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { MaterialModule } from '../../material/material/material.module';
 import { NavbarModule } from '../../components/navbar/navbar.module';
 import { DataTableModule } from '../../components/data-table/data-table.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [RegisterComponent, LoginComponent, ForgotpasswordComponent],
@@ -16,6 +17,7 @@ import { DataTableModule } from '../../components/data-table/data-table.module';
     MaterialModule,
     NavbarModule,
     DataTableModule,
+    FormsModule,
   ],
 })
 export class AuthModule {}

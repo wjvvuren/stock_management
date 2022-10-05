@@ -1,153 +1,154 @@
 <div class="container-fluid bg1 mt-4">
+  <button
+    (click)="back()"
+    class="mb-5 btn primary-btn w-25 float-start back-btn"
+    type="button"
+  >
+    Back
+  </button>
   <div class="row justify-content-md-center">
     <div class="col-md-8">
       <div class="card">
         <div class="card-header">
           <div class="d-flex justify-content-between">
-            <h1>Edit : BMW X5 F25</h1>
-            <button
-              (click)="save()"
-              type="submit"
-              class="mt-3 btn primary-btn w-50"
-            >
-              Update
-            </button>
+            <h1>Edit : {{ vehicle.Make }}</h1>
           </div>
         </div>
         <div class="card-body">
           <form>
             <div class="row">
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="registration">Registration Number</label>
                   <input
-                    value="ABC12323"
+                    [value]="vehicle.RegNo"
                     type="text"
                     class="form-control"
-                    id="registration"
                     placeholder="Registration"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="make">Make</label>
                   <input
-                    value="BMW"
+                    [value]="vehicle.Make"
                     type="text"
                     class="form-control"
-                    id="make"
                     placeholder="Make"
                   />
                 </div>
               </div>
 
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="model">Model</label>
                   <input
-                    value="X5"
+                    [value]="vehicle.Model"
                     type="text"
                     class="form-control"
-                    id="model"
                     placeholder="Model"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="modelYear">Model Year</label>
                   <input
-                    value="2015"
+                    [value]="vehicle.ModelYear"
                     type="text"
                     class="form-control"
-                    id="modelYear"
                     placeholder="Model Year"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="kilometers">Kilometers</label>
                   <input
-                    value="10000"
+                    [value]="vehicle.Kilometers"
                     type="text"
                     class="form-control"
-                    id="kilometers"
                     placeholder="Kilometers"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="colour">Colour</label>
                   <input
-                    value="Silver"
+                    [value]="vehicle.Colour"
                     type="text"
                     class="form-control"
-                    id="colour"
                     placeholder="Colour"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="vin">VIN</label>
                   <input
-                    value="123456789"
+                    [value]="vehicle.VIN"
                     type="text"
                     class="form-control"
-                    id="vin"
                     placeholder="VIN"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="retailPrice">Retail Price</label>
                   <input
-                    value="R100000"
+                    [value]="vehicle.RetailPrice"
                     type="text"
                     class="form-control"
-                    id="retailPrice"
                     placeholder="Retail Price"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="costPrice">Cost Price</label>
                   <input
-                    value="R90000"
+                    [value]="vehicle.CostPrice"
+                    value="123"
                     type="text"
                     class="form-control"
-                    id="costPrice"
                     placeholder="Cost Price"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <label for="accessories">Accessories</label>
+
                   <input
-                    value="Leather Seats"
+                    [value]="vehicle.Accessories[0].name"
+                    value="Air Conditioning"
                     type="text"
                     class="form-control"
-                    id="accessories"
                     placeholder="Accessories"
                   />
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group mb-2">
+                <div class="mb-2">
                   <img
                     class="img-fluid edit-img"
-                    src="https://assets-global.website-files.com/6047b5ff5b990938b601662f/6259b05c2ff99256275c949d_2018-BMW-X5.jpeg"
+                    [src]="vehicle.images[0].src"
                     alt="BMW X5"
                   />
                 </div>
               </div>
-              <div class="col-md-6"></div>
+              <div class="col-md-6">
+                <button
+                  (click)="save()"
+                  type="submit"
+                  class="mt-3 btn primary-btn w-50"
+                >
+                  Update
+                </button>
+              </div>
             </div>
           </form>
         </div>

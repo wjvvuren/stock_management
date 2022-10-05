@@ -1,20 +1,3 @@
-<div id="scroll-container">
-  <div id="scroll-text">
-    <b>F1 NEWS: </b>
-    <img class="newsImg" src="../../../../assets/Images/max.jpg" alt="logo" />
-    Max Verstappen is the overall leaderthis year with a staggering 341 points.
-    Unfortunately,
-
-    <img class="newsImg" src="../../../../assets/Images/sad.jpg" alt="logo" />
-    Lewis Hamilton cannot be regarded to be in the same boat. struggle with
-    pathetic 170 points. For individuals who are having trouble processing the
-    news, a help line has been established. Toll-free number to call now:
-    1-800-555-5555. or
-
-    <a href="https://www.verstappen.com/" target="_blank">Click here</a>
-  </div>
-</div>
-
 <div class="container-fluid customHeight bg1">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-9 col-lg-6 col-xl-5">
@@ -38,6 +21,7 @@
               class="form-control"
               id="username"
               placeholder="Username"
+              [(ngModel)]="username"
             />
           </div>
 
@@ -48,6 +32,7 @@
               class="form-control"
               id="password"
               placeholder="Password"
+              [(ngModel)]="password"
             />
           </div>
 
