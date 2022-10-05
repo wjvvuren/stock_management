@@ -20,30 +20,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+      <div class="navbar-nav me-auto">
         <a class="nav-link" routerLink="/admin/dashboard">Dashboard</a>
-
-        <div class="dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Profile
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" routerLink="/admin/profile">Profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item" routerLink="/auth/logout">Logout</a>
-            </li>
-          </ul>
-        </div>
       </div>
+      <a class="nav-link me-2" routerLink="/auth">Logout</a>
     </div>
   </div>
 </nav>

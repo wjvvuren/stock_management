@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-new',
@@ -7,7 +8,11 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./create-new.component.scss'],
 })
 export class CreateNewComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
+
+  save() {
+    this.router.navigate(['admin', 'dashboard']);
+  }
 
   ngOnInit(): void {}
 }

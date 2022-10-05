@@ -4,7 +4,7 @@
       <img
         height="10rem"
         src="../../../../assets/Images/login.png"
-        class="img-fluid mt-2"
+        class="img-fluid stock-img mt-2"
         alt="motorcar"
       />
     </div>
@@ -51,7 +51,13 @@
                 placeholder="Confirm Password"
               />
             </div>
-            <button type="submit" class="primary-btn w-100">Register</button>
+            <button
+              (click)="register()"
+              type="submit"
+              class="primary-btn w-100"
+            >
+              Register
+            </button>
           </form>
         </div>
       </div>

@@ -1,5 +1,13 @@
-@media screen and (max-width: 767px) {
-  img {
+.stock-img {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  height: 30rem;
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  .stock-img {
     display: none;
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-edit',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-edit.component.scss'],
 })
 export class ViewEditComponent implements OnInit {
-  // dummy object data cars: registration number and make
-  cars = [{ registration: '1234', make: 'Ford' }];
+  constructor(private router: Router) {}
 
-  constructor() {}
-
+  save() {
+    this.router.navigate(['admin', 'dashboard']);
+  }
   ngOnInit(): void {}
 }

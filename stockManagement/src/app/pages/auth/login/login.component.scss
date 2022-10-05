@@ -1,5 +1,4 @@
 .customHeight {
-  // calculate height be 100vh minus 2rem
   height: calc(100vh - 2rem);
 }
 
@@ -33,12 +32,10 @@
   white-space: nowrap;
   background-color: var (--color-secondary);
   color: var(--color-primary);
-  border: 2px solid black;
   overflow: hidden;
 }
 
 #scroll-text {
-  /* animation properties */
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
@@ -48,7 +45,6 @@
   animation: my-animation 30s linear infinite;
 }
 
-/* for Firefox */
 @-moz-keyframes my-animation {
   from {
     -moz-transform: translateX(100%);
@@ -58,7 +54,6 @@
   }
 }
 
-/* for Chrome */
 @-webkit-keyframes my-animation {
   from {
     -webkit-transform: translateX(100%);

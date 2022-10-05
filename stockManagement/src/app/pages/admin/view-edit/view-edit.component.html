@@ -3,21 +3,29 @@
     <div class="col-md-8">
       <div class="card">
         <div class="card-header">
-          <h1>Edit Vehicle : BMW X5 2013 (f25)</h1>
+          <div class="d-flex justify-content-between">
+            <h1>Edit : BMW X5 F25</h1>
+            <button
+              (click)="save()"
+              type="submit"
+              class="mt-3 btn primary-btn w-50"
+            >
+              Update
+            </button>
+          </div>
         </div>
         <div class="card-body">
-          <!-- use object cars to map data -->
-
-          <form *ngFor="let item of cars">
+          <form>
             <div class="row">
               <div class="col-md-6">
-                <div class="mb-2">
+                <div class="form-group mb-2">
                   <label for="registration">Registration Number</label>
                   <input
+                    value="ABC12323"
                     type="text"
+                    class="form-control"
                     id="registration"
                     placeholder="Registration"
-                    [(ngModel)]="item.registration"
                   />
                 </div>
               </div>
@@ -25,15 +33,121 @@
                 <div class="form-group mb-2">
                   <label for="make">Make</label>
                   <input
+                    value="BMW"
                     type="text"
+                    class="form-control"
                     id="make"
                     placeholder="Make"
-                    [(ngModel)]="item.make"
                   />
                 </div>
               </div>
 
-              <!--  -->
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="model">Model</label>
+                  <input
+                    value="X5"
+                    type="text"
+                    class="form-control"
+                    id="model"
+                    placeholder="Model"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="modelYear">Model Year</label>
+                  <input
+                    value="2015"
+                    type="text"
+                    class="form-control"
+                    id="modelYear"
+                    placeholder="Model Year"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="kilometers">Kilometers</label>
+                  <input
+                    value="10000"
+                    type="text"
+                    class="form-control"
+                    id="kilometers"
+                    placeholder="Kilometers"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="colour">Colour</label>
+                  <input
+                    value="Silver"
+                    type="text"
+                    class="form-control"
+                    id="colour"
+                    placeholder="Colour"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="vin">VIN</label>
+                  <input
+                    value="123456789"
+                    type="text"
+                    class="form-control"
+                    id="vin"
+                    placeholder="VIN"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="retailPrice">Retail Price</label>
+                  <input
+                    value="R100000"
+                    type="text"
+                    class="form-control"
+                    id="retailPrice"
+                    placeholder="Retail Price"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="costPrice">Cost Price</label>
+                  <input
+                    value="R90000"
+                    type="text"
+                    class="form-control"
+                    id="costPrice"
+                    placeholder="Cost Price"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="accessories">Accessories</label>
+                  <input
+                    value="Leather Seats"
+                    type="text"
+                    class="form-control"
+                    id="accessories"
+                    placeholder="Accessories"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <img
+                    class="img-fluid edit-img"
+                    src="https://assets-global.website-files.com/6047b5ff5b990938b601662f/6259b05c2ff99256275c949d_2018-BMW-X5.jpeg"
+                    alt="BMW X5"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6"></div>
             </div>
           </form>
         </div>
