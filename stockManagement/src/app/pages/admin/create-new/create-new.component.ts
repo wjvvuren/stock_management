@@ -34,17 +34,9 @@ export class CreateNewComponent implements OnInit {
       VIN: '',
       RetailPrice: 0,
       CostPrice: 0,
-      Accessories: [
-        {
-          name: '',
-          description: '',
-        },
-      ],
-      images: [
-        {
-          src: '',
-        },
-      ],
+      Accessory: '',
+
+      images: '',
 
       DateCreated: new Date(),
       DateUpdated: new Date(),

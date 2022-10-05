@@ -1,7 +1,5 @@
-import { DataSource } from '@angular/cdk/collections';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { ToastrService } from 'ngx-toastr';
@@ -16,8 +14,8 @@ export interface Vehicle {
   VIN: string;
   RetailPrice: number;
   CostPrice: number;
-  Accessories: Array<{ name: string; description: string }>;
-  images: Array<{ src: string }>;
+  Accessory: string;
+  images: string;
   DateCreated: Date;
   DateUpdated: Date;
 }

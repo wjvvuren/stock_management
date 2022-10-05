@@ -17,17 +17,9 @@ export class DataService {
       VIN: '123456789',
       RetailPrice: 10000,
       CostPrice: 50000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-
-      images: [
-        {
-          src: 'https://img-ik.cars.co.za/specimages/tr:n-stock_large/toyocoro7s4_1.jpg',
-        },
-      ],
-
+      Accessory: 'Power Steering',
+      images:
+        'https://img-ik.cars.co.za/specimages/tr:n-stock_large/toyocoro7s4_1.jpg',
       DateCreated: new Date(),
       DateUpdated: new Date(),
     },
@@ -41,15 +33,10 @@ export class DataService {
       VIN: '123456789',
       RetailPrice: 10000,
       CostPrice: 65000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-      images: [
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
-      ],
+      Accessory: 'ABS EDF ABC',
+      images:
+        'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
+
       DateCreated: new Date(),
       DateUpdated: new Date(),
     },
@@ -63,16 +50,8 @@ export class DataService {
       VIN: '123456789',
       RetailPrice: 10000,
       CostPrice: 105000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-
-      images: [
-        {
-          src: 'https://img.autotrader.co.za/2873049/Crop800x600',
-        },
-      ],
+      Accessory: 'Sunroof, Leather Seats',
+      images: 'https://img.autotrader.co.za/2873049/Crop800x600',
 
       DateCreated: new Date(),
       DateUpdated: new Date(),
@@ -87,15 +66,10 @@ export class DataService {
       VIN: '123456789',
       RetailPrice: 10000,
       CostPrice: 99000,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-      images: [
-        {
-          src: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Audi_A1_Sportback_1.6_TDI_Ambition_%E2%80%93_Frontansicht%2C_5._September_2012%2C_Wuppertal.jpg',
-        },
-      ],
+      Accessory: 'Wiper Blades',
+      images:
+        'https://upload.wikimedia.org/wikipedia/commons/9/9c/Audi_A1_Sportback_1.6_TDI_Ambition_%E2%80%93_Frontansicht%2C_5._September_2012%2C_Wuppertal.jpg',
+
       DateCreated: new Date(),
       DateUpdated: new Date(),
     },
@@ -109,15 +83,10 @@ export class DataService {
       VIN: '123456789',
       RetailPrice: 10000,
       CostPrice: 812300,
-      Accessories: [
-        { name: 'Aircon', description: 'Aircon' },
-        { name: 'Power Steering', description: 'Power Steering' },
-      ],
-      images: [
-        {
-          src: 'https://images.squarespace-cdn.com/content/v1/603f9fc6a2120f0be59de63c/81dd0425-6aa7-463c-908a-d49b13ae1c17/BW_2021_Ford+F250_Feature_Hero2.jpg?format=2500w',
-        },
-      ],
+      Accessory: 'Forklift',
+      images:
+        'https://images.squarespace-cdn.com/content/v1/603f9fc6a2120f0be59de63c/81dd0425-6aa7-463c-908a-d49b13ae1c17/BW_2021_Ford+F250_Feature_Hero2.jpg?format=2500w',
+
       DateCreated: new Date(),
       DateUpdated: new Date(),
     },
