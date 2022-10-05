@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 export interface carElements {
   RegNo: string;
   Make: string;
@@ -26,6 +26,7 @@ export interface carElements {
   styleUrls: ['./data-table.component.scss'],
 })
 export class DataTableComponent implements OnInit {
+  faTrash = faTrash;
   carData: carElements[] = [
     {
       RegNo: '123456',
@@ -43,12 +44,6 @@ export class DataTableComponent implements OnInit {
       ],
 
       images: [
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
         {
           src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
         },
@@ -95,12 +90,6 @@ export class DataTableComponent implements OnInit {
       ],
 
       images: [
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
-        {
-          src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
-        },
         {
           src: 'https://cdn.motor1.com/images/mgl/P3G20A/s3/bmw-x5-m-facelift-rendering-by-kolesa.ru.jpg',
         },

@@ -8,8 +8,19 @@ ul {
 table {
   width: 90vw;
   border-collapse: collapse;
-  // border-radius: 2em;
 }
-// table tr:last-child td {
-//   border-bottom: 0 solid;
-// }
+
+.action-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 2rem;
+  width: 2rem;
+}

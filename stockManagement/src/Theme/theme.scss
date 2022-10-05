@@ -29,6 +29,20 @@
   }
 }
 
+.danger-btn {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0.25rem;
+
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--color-danger-dark);
+  }
+}
+
 .card {
   border: none;
   border-radius: 0.3rem;
