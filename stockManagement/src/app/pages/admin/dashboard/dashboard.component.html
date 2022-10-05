@@ -3,14 +3,12 @@
   <div class="row">
     <div class="col-md-12">
       <h1 class="text-center mt-2">Vehicle Management</h1>
-    </div>
 
-    <div class="col-md-12">
-      <div class="d-flex justify-content-end">
-        <button class="btn primary-btn">Add New</button>
+      <button (click)="addNew()" class="btn primary-btn">Add New</button>
+
+      <div class="d-flex justify-content-center">
+        <app-data-table></app-data-table>
       </div>
     </div>
-
-    <app-data-table></app-data-table>
   </div>
 </div>

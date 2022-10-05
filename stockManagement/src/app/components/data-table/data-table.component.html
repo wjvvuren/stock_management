@@ -1,4 +1,13 @@
-<table mat-table [dataSource]="carData" class="mat-elevation-z8">
+<ng-container *ngIf="!carData.length">
+  <p class="text-center">No vehicles loaded</p>
+</ng-container>
+
+<table
+  *ngIf="carData.length > 0"
+  mat-table
+  [dataSource]="carData"
+  class="mat-elevation-z8"
+>
   <ng-container matColumnDef="RegNo">
     <th mat-header-cell *matHeaderCellDef>RegNo</th>
     <td mat-cell *matCellDef="let car">{{ car.RegNo }}</td>
@@ -92,10 +101,10 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef>Actions</th>
     <td mat-cell *matCellDef="let car">
-      <button mat-icon-button (click)="editCar(car)">
+      <button mat-icon-button (click)="viewEdit()">
         <mat-icon>edit</mat-icon>
       </button>
-      <button mat-icon-button (click)="deleteCar(car)">
+      <button mat-icon-button (click)="delete(car)">
         <mat-icon>delete</mat-icon>
       </button>
     </td>
