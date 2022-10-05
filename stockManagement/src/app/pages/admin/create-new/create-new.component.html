@@ -1,13 +1,151 @@
-<!-- use navbar component with the bg1 -->
 <app-navbar></app-navbar>
-<div class="container-fluid bg1">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center mt-2">Add new vehicle</h1>
-    </div>
+<div class="container-fluid bg1 mt-4">
+  <div class="row justify-content-md-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h1>Add New Vehicle</h1>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="registration">Registration Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="registration"
+                    placeholder="Registration"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="make">Make</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="make"
+                    placeholder="Make"
+                  />
+                </div>
+              </div>
 
-    <div class="col-md-12">
-      <div class="d-flex justify-content-end"></div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="model">Model</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="model"
+                    placeholder="Model"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="modelYear">Model Year</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="modelYear"
+                    placeholder="Model Year"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="kilometers">Kilometers</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="kilometers"
+                    placeholder="Kilometers"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="colour">Colour</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="colour"
+                    placeholder="Colour"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="vin">VIN</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="vin"
+                    placeholder="VIN"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="retailPrice">Retail Price</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="retailPrice"
+                    placeholder="Retail Price"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="costPrice">Cost Price</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="costPrice"
+                    placeholder="Cost Price"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="accessories">Accessories</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="accessories"
+                    placeholder="Accessories"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-2">
+                  <label for="uploadImage">Upload Image</label>
+                  <!-- <input
+                      type="file"
+                      class="form-control"
+                      id="uploadImage"
+                      placeholder="Upload Image"
+                    /> -->
+
+                  <div class="dropzone">
+                    <div class="dz-message">
+                      <div class="col-xs-8">
+                        <div class="message">
+                          <p>Drop files here or click to upload.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

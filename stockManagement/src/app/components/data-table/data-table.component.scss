@@ -2,6 +2,14 @@ ul {
   list-style: none;
 }
 
-tabe {
-  z-index: 1;
+.mat-table {
+  background-color: hsla(0, 0%, 100%, 0.571) !important;
 }
+table {
+  width: 90vw;
+  border-collapse: collapse;
+  // border-radius: 2em;
+}
+// table tr:last-child td {
+//   border-bottom: 0 solid;
+// }

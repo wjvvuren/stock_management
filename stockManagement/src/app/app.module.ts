@@ -12,10 +12,12 @@ import { NavbarModule } from './components/navbar/navbar.module';
 import { DataTableModule } from './components/data-table/data-table.module';
 import { AuthComponent } from './pages/auth/auth.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, AdminComponent],
   imports: [
+    MatPaginatorModule,
     DataTableModule,
     NavbarModule,
     BrowserModule,

@@ -1,5 +1,6 @@
 import { DataSource } from '@angular/cdk/collections';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 
@@ -185,7 +186,6 @@ export class DataTableComponent implements OnInit {
   ];
 
   displayedColumns: string[] = [
-    'images',
     'RegNo',
     'Make',
     'Model',
@@ -201,6 +201,8 @@ export class DataTableComponent implements OnInit {
     'DateUpdated',
     'actions',
   ];
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private router: Router) {}
 
