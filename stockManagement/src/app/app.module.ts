@@ -17,8 +17,15 @@ import { AdminComponent } from './pages/admin/admin.component';
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, AdminComponent],
-  imports: [DataTableModule, NavbarModule, BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule],
+  imports: [
+    DataTableModule,
+    NavbarModule,
+    BrowserModule,
+    AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
